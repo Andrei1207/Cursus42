@@ -10,3 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+static void
+
+ char **ft_split(char const *s, char c)
+ {
+   int   words;
+   int   i;
+   i = 0;
+
+   words = 0;
+   while(s != '\0')
+   {
+      if(s[i])
+      {
+         words++;
+      }
+      i++;
+   }
+    //char **split = *(char*)malloc()
+
+ }

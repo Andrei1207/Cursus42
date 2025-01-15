@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 17:08:38 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:26:00 by aciobanu         ###   ########.fr       */
+/*   Created: 2025/01/09 16:57:39 by marvin            #+#    #+#             */
+/*   Updated: 2025/01/09 16:57:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t  ft_strlen(const char *s)
+void *ft_calloc(size_t nelem, size_t elsize)
 {
-        size_t  i;
+    void	*ptr;
 
-        i = 0;
-        while (s[i] != '\0')
-        {
-                i++;
-        }
-        return (i);
+	ptr = (void*)malloc(nelem * elsize);
+	if (!ptr)
+		return (0);
+    int i;
+
+    i = 0;
+	while(ptr)
+    {
+        (char*)ptr[i] = '\0';
+
+
+        i++;
+    }
+	return (ptr);
 }

@@ -10,3 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+int ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+    if(!n)
+        return (0);
+        
+    int i;
+    unsigned char *us1;
+    unsigned char *us2;
+
+    us1 = (unsigned char*)s1;
+    us2 = (unsigned char*)s2;
+    i = 0;
+    while(++i < n && *us1 == *us2)
+    {
+        us1++;
+        us2++;
+    }
+    return ((int)(*us1 - *us2));
+}
