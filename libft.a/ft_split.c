@@ -97,21 +97,3 @@ char	**ft_split(char const *s, char c)
 	strings[i] = NULL;
 	return (strings);
 }
-/*#include <stdio.h>
-int main() {
-    char str[] = "   Hello   world!   ";
-    char **words = ft_split(str);
-    
-    if (words) {
-        printf("Mots séparés :\n");
-        for (int i = 0; words[i] != NULL; i++) {
-            printf("%s\n", words[i]);
-            free(words[i]); // Libérer la mémoire allouée pour chaque mot
-        }
-        free(words); // Libérer la mémoire allouée pour le tableau de mots
-    } else {
-        printf("Erreur lors de l'allocation mémoire.\n");
-    }
-
-    return 0;
-}*/
