@@ -6,43 +6,50 @@
 /*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:17:25 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:25:45 by aciobanu         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:26:40 by aciobanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int count(int num)
-{
-    int i;
+#include "libft.h"
 
-    i = 0;
-    if(num < 0)
-    {
-        num *= -1;
-    }
-    while (num > 0)
-    {
-        num /= 10;
-        i++;
-    }
-    return (i);
+static int	count(int n)
+{
+	int	count;
+
+	count = 0;
+	if (n <= 0)
+		count = 1;
+	while (n != 0)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    int len;
+	int		len;
+	long	nb;
+	char	*str;
 
-    len = count(n);
-    char *str;
-    str = (char *)malloc(len * sizeof(char) + 1);
-    if (n < 0)
-    {
-        str[0] = '-';
-        n *= -1;
-    }
-    while(n >= 0)
-    {
-        str[len--] = (n % 10) + '0';
-        n /= 10;
-    }
-    return (str);
+	nb = n;
+	len = count(nb);
+	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = -nb;
+	}
+	while (len > 0 && nb > 0)
+	{
+		str[--len] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	if (n == 0)
+		str[0] = '0';
+	return (str);
 }

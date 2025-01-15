@@ -6,18 +6,16 @@
 /*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:08:29 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:25:44 by aciobanu         ###   ########.fr       */
+/*   Updated: 2025/01/15 17:00:25 by aciobanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
-        if (c <= 9 && c >= 0)
-        {
-                return (1);
-        }
-        else
-        {
-                return (0);
-        }
+	if (c <= '9' && c >= '0')
+		return (1);
+	else
+		return (0);
 }

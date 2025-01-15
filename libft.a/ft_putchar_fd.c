@@ -6,11 +6,13 @@
 /*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:18:18 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:25:53 by aciobanu         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:28:02 by aciobanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- void ft_putchar_fd(char c, int fd)
- {
-    write(fd, &c, 1);
- }
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

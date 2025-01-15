@@ -6,32 +6,31 @@
 /*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:08:19 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:32:54 by aciobanu         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:24:31 by aciobanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_atoi(char *str)
-{
-        int     i;
-        int     sign;
-        int     nb;
+#include "libft.h"
 
-        i = 0;
-        while (str[i] != '\0' && (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
-                        || str[i] == '\r' || str[i] == '\t' || str[i] == '\v'))
-                i++;
-        sign = 1;
-        while (str[i] != '\0' && (str[i] == '-' || str[i] == '+'))
-        {
-                if (str[i] == '-')
-                        sign *= -1;
-                i++;
-        }
-        nb = 0;
-        while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
-        {
-                nb = nb * 10 + str[i] - '0';
-                i++;
-        }
-        return (nb * sign);
+int	ft_atoi(const char *str)
+{
+	int	sign;
+	int	result;
+
+	result = 0;
+	sign = 1;
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while ((*str >= '0' && *str <= '9'))
+	{
+		result = result * 10 + (*str - '0');
+		str++;
+	}
+	return (sign * result);
 }

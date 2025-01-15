@@ -6,20 +6,13 @@
 /*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:08:24 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:25:42 by aciobanu         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:25:37 by aciobanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isalpha(unsigned char *str)
-{
-        int     i;
+#include "libft.h"
 
-        i = 0;
-        while (str[i])
-        {
-                if (!(str[i] >= 'A' && str[i] <= 'Z') || !(str[i] >= 'a' && str[i] <= 'z'))
-                        return (0);
-                i++;
-        }
-        return (1);
+int	ft_isalpha(int c)
+{
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

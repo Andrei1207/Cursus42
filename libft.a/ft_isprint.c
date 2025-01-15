@@ -6,11 +6,13 @@
 /*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:14:21 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:25:45 by aciobanu         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:26:25 by aciobanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

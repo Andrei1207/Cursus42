@@ -6,11 +6,13 @@
 /*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:14:10 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:25:43 by aciobanu         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:26:00 by aciobanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 0177);
+	return (c >= 0 && c <= 0177);
 }

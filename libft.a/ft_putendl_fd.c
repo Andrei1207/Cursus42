@@ -6,20 +6,17 @@
 /*   By: aciobanu <aciobanu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:19:33 by aciobanu          #+#    #+#             */
-/*   Updated: 2024/12/09 17:25:53 by aciobanu         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:28:15 by aciobanu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- void ft_putendl_fd(char *s, int fd)
- {
-    if(!s)
-        return ;
-    int i;
+#include "libft.h"
 
-    i = 0;
-    while(s[i] != '\0')
-    {
-        write(fd, &s[i], 1);
-    }
-    write(fd, '\n', 1);
- }
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	while (*s)
+		write(fd, s++, 1);
+	write (fd, "\n", 1);
+}
